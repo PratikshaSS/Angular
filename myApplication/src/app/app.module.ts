@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { DatabindingComponent } from './databinding/databinding.component';
 
 @NgModule({
   declarations: [   //component/pipe/directive
@@ -13,6 +14,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     HomeComponent,
     LoginComponent,
     SignUpComponent,
+    DatabindingComponent,
   ],
   imports: [      //modules
     BrowserModule,
