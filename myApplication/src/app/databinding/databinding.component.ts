@@ -7,14 +7,29 @@ import { Component } from '@angular/core';
 })
 export class DatabindingComponent {
   //DB : Data Binding >> Communication between component and DOM.
-  // two types : 1) One-way DB  2) Two-way DB >> ([])   (Javatpoint)
-  // String Interpolation >> {{}}
-  // Property Binding >> []
-  // Event Binding >> ()
+  // two types : 1) One-way DB    (Javatpoint)
+  // i) String Interpolation >> {{}}  >> pass data from typescript to html/DOM
+  // ii) Property Binding >> []
+  // iii) Event Binding >> ()
+  //2) Two-way DB >> ([])
+
+  //  = : assignment operator >> to assign value to the var/prop
+  //  == : equality operator >> compares value only
+  //  === : compares value as well as datatype 
 
 data : any = "We are learning string interpolation";  //string interpolation
+amount : number = 900000;
+schoolName! : string;
+isMatch = true;
+x = 7;
 
 
+name = "Pratiksha...";  //property binding
+
+
+test(){
+  return 50*2;
+}
 
 
 }

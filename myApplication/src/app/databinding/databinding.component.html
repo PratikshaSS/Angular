@@ -1,1 +1,27 @@
  <p>{{data}}</p>     <!--string interpolation -->
+<div>{{amount}}</div>
+
+<!-- We can pass function to the string interpolation -->
+<div>{{test()}}</div>
+
+<!-- Assignment is not possible with interpolation -->
+<!-- <div>{{schoolName = "Holy Family"}}</div> -->
+
+<!-- we can use equality operator -->
+<!-- <div>{{amount == 900000}}</div>  overlapping of num and string not possible -->
+<div>{{amount === 900000}}</div>
+
+<!-- expression is possible -->
+<div>{{amount*7}}</div>
+
+<!-- boolean is working -->
+<p>{{!isMatch}}</p>
+
+<!-- increment / decrement not allowed -->
+<!-- <p>{{x++}}</p> -->
+<!-- <p>{{x--}}</p> -->
+
+
+<!-- Property Binding -->
+<input type="text" [value]="name">Enter Name
+
