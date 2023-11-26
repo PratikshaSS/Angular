@@ -1,0 +1,18 @@
+.divContainer {
+    background-color: cadetblue;
+    height: 800px;
+}
+
+.btn {
+    background-color: yellowgreen;
+    padding: 5px 5px;
+    margin: 4px;
+    border: none;
+    border-radius: 15px;
+}
+
+.main {
+    position: relative;
+    top: 20px;
+    left: 10px;
+}

@@ -17,24 +17,24 @@ export class DatabindingComponent {
   //  == : equality operator >> compares value only
   //  === : compares value as well as datatype 
 
-data : any = "We are learning string interpolation";  //string interpolation
-amount : number = 900000;
-schoolName! : string;
-isMatch = true;
-x = 7;
+  data: any = "We are learning string interpolation";  //string interpolation
+  amount: number = 900000;
+  schoolName!: string;
+  isMatch = true;
+  x = 7;
 
-name = "Pratiksha...";  //property binding
+  name = "Pratiksha...";  //property binding
 
-clickEventData : any;   //event binding
+  clickEventData: any;   //event binding
 
-city : any = "Satara";   //Two way data binding
+  city: any = "Satara";   //Two way data binding
 
-test(){
-  return 50*2;
-}
+  test() {
+    return 50 * 2;
+  }
 
-clickEvent(){
-  this.clickEventData = "7484378";
-}
+  clickEvent() {
+    this.clickEventData = "7484378";
+  }
 
 }
