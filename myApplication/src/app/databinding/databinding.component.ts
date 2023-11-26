@@ -11,7 +11,7 @@ export class DatabindingComponent {
   // i) String Interpolation >> {{}}  >> pass data from typescript to html/DOM
   // ii) Property Binding >> []
   // iii) Event Binding >> ()
-  //2) Two-way DB >> ([])
+  //2) Two-way DB >> ([])  >> ngModel directive
 
   //  = : assignment operator >> to assign value to the var/prop
   //  == : equality operator >> compares value only
@@ -23,13 +23,18 @@ schoolName! : string;
 isMatch = true;
 x = 7;
 
-
 name = "Pratiksha...";  //property binding
 
+clickEventData : any;   //event binding
+
+city : any = "Satara";   //Two way data binding
 
 test(){
   return 50*2;
 }
 
+clickEvent(){
+  this.clickEventData = "7484378";
+}
 
 }

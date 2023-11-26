@@ -23,5 +23,17 @@
 
 
 <!-- Property Binding -->
-<input type="text" [value]="name">Enter Name
+<input type="text" [value]="name">Enter Name <br><br>
+
+
+<!-- Event binding -->
+<button (click)="clickEvent()">Click Event</button><br>
+{{clickEventData}}
+<br><br>
+
+
+<!-- Two way data binding -->
+<input type="text" [(ngModel)] = "city">Enter City
+<br>
+Entered City = {{city}}
 
