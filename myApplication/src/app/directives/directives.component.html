@@ -1,0 +1,22 @@
+<p>directives works!</p>
+
+<!-- *ngIf -->
+<div *ngIf="isShow">
+    <p>{{city}}</p>
+</div>
+<br>
+
+ <!-- *ngFor -->
+<div>{{cars}}</div>
+<br>
+<div *ngFor="let carName of cars">
+    {{carName}}
+</div>
+
+<br>
+
+<div class="divContainer" *ngIf="showDiv"></div>
+
+<br>
+
+<button (click)="toggle()">Toggle</button>

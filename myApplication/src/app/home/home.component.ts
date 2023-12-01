@@ -35,4 +35,8 @@ export class HomeComponent {
     console.log("test calling....");
     
   }
+
+  directives(){
+    this.router.navigateByUrl("directives");
+  }
 }
