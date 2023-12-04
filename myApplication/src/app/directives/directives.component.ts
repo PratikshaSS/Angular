@@ -37,12 +37,15 @@ isShow = 34567;   //null/undefined/false >>>false
 // *ngFor :
 cars = ['i20' , 'i10' , 'swift' , 'kia'];
 
-
 showDiv = true;
+
+fruit = "mango";
+
 toggle(){
   //this.showDiv = false;
   this.showDiv = !this.showDiv;
 }
+
 
 
 }

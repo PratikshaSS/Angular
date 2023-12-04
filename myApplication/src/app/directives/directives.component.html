@@ -20,3 +20,10 @@
 <br>
 
 <button (click)="toggle()">Toggle</button>
+
+<div [ngSwitch] = "fruit">
+    <div *ngSwitchCase = "'mango'">Mango is my fav fruit.</div>
+    <div *ngSwitchCase = "'pinapple'">Pinapple is my fav fruit.</div>
+    <div *ngSwitchCase = "'pappaya'">Papaya is my fav fruit.</div>
+
+</div>
