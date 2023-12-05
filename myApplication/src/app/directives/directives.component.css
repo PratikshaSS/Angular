@@ -4,3 +4,26 @@
     height: 100px;
     width: 100px;
 }
+
+.info{
+    background-color: yellow;
+    border: 1px solid blue;
+}
+
+.adminClass{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+}
+
+.mentorClass{
+    background-color: rgb(221, 121, 168);
+    height: 100px;
+    width: 100px;
+}
+
+.studentClass{
+    background-color: palevioletred;
+    height: 100px;
+    width: 100px;
+}

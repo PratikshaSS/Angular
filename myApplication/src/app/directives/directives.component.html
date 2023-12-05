@@ -1,5 +1,7 @@
 <p>directives works!</p>
 
+<!-- 1) Structural Directives -->
+
 <!-- *ngIf -->
 <div *ngIf="isShow">
     <p>{{city}}</p>
@@ -20,10 +22,45 @@
 <br>
 
 <button (click)="toggle()">Toggle</button>
-
+<br><br>
+<!-- ngSwitch -->
 <div [ngSwitch] = "fruit">
     <div *ngSwitchCase = "'mango'">Mango is my fav fruit.</div>
     <div *ngSwitchCase = "'pinapple'">Pinapple is my fav fruit.</div>
     <div *ngSwitchCase = "'pappaya'">Papaya is my fav fruit.</div>
+</div>
+<br><br>
 
+<!-- 2) Attribute Directive -->
+<div class="info">
+    I Like Pune
+</div>
+<br>
+
+<!-- ngClass -->
+<div [ngClass]="{'adminClass' : user == 'Admin' , 
+                 'mentorClass' : user == 'Mentor',
+                 'studentClass' : user =='Student'
+                }">
+    Welcome To App
+</div>
+
+<br> 
+
+<div [class.adminClass]="user == 'Admin'"
+     [class.mentorClass]="user == 'Mentor'"
+     [class.studentClass]="user == 'Student'">
+    WelCome 
+</div>
+<br><br>
+
+<!-- ngStyle -->
+<div style="color: blueviolet;">
+Welcome 
+</div>
+<br>
+
+<div [ngStyle]= "user == 'Admin' ? {'background-color' : 'yellow'}
+                    :{'background-color' : 'orange'}">
+    Welcome to ngStyle 
 </div>

@@ -22,6 +22,7 @@ export class DirectivesComponent {
 // *ngSwitch Directive: The *ngSwitch allows us to Add/Remove DOM Element. It is similar to switch statement of C#.
 // *ngFor Directive: The *ngFor directive is used to repeat a portion of HTML template once per each item from an iterable
   // list (Collection).
+
 // Attribute Directives: Attribute directives are used to change the look and behavior of the DOM elements. For example:
   // ngClass directive, and ngStyle directive etc.
 
@@ -29,6 +30,8 @@ export class DirectivesComponent {
 // ngStyle Directive: The ngStyle directive facilitates you to modify the style of an HTML element using the expression.
   // You can also use ngStyle directive to dynamically change the style of your HTML element.
  
+
+// 1) Structural Directives
 
 // *ngIf : 
 city = "Pune";
@@ -39,14 +42,20 @@ cars = ['i20' , 'i10' , 'swift' , 'kia'];
 
 showDiv = true;
 
-fruit = "mango";
-
 toggle(){
   //this.showDiv = false;
   this.showDiv = !this.showDiv;
 }
 
+// *ngSwitch
+fruit = "mango";
 
+
+// 2) Attribute Directives
+
+// user : string = "Admin";
+ user : string = "Mentor";
+// user : string = "Student";
 
 }
 
