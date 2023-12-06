@@ -9,6 +9,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
+import { LifecyclehooksComponent } from './lifecyclehooks/lifecyclehooks.component';
 
 @NgModule({
   declarations: [   //component/pipe/directive
@@ -18,6 +19,7 @@ import { DirectivesComponent } from './directives/directives.component';
     SignUpComponent,
     DatabindingComponent,
     DirectivesComponent,
+    LifecyclehooksComponent,
   ],
   imports: [      //modules
     BrowserModule,
