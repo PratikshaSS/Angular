@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-lifecyclehooks',
@@ -10,7 +11,7 @@ export class LifecyclehooksComponent {
   name : any; //normal prop
   // @Input() surName : any; //input prop
   
-  constructor() {
+  constructor(private dataService : DataService) {
     console.log("Constructor calling..");
 
   }
@@ -32,6 +33,8 @@ export class LifecyclehooksComponent {
   }
 
   ngOnInit(){
+    this.name = this.dataService.userName ;
+
     console.log("ngOnInit calling");
   }
 

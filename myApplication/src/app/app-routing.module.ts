@@ -13,7 +13,9 @@ const routes: Routes = [
   { path : 'signUp', component : SignUpComponent},
   { path : 'dataBinding', component : DatabindingComponent},
   { path : 'directives', component : DirectivesComponent},
-  { path : 'lifecycleHooks', component : LifecyclehooksComponent}
+  { path : 'lifecycleHooks', component : LifecyclehooksComponent},
+  
+  
 ];
 
 @NgModule({
