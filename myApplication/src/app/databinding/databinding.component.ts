@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-databinding',
@@ -29,12 +31,20 @@ export class DatabindingComponent {
 
   city: any = "Satara";   //Two way data binding
 
+
+  constructor(private router : Router , private dataService : DataService){}
+
   test() {
     return 50 * 2;
   }
 
   clickEvent() {
     this.clickEventData = "7484378";
+  }
+
+  assignVal(){
+    this.dataService.userName="Ajay";
+    this.router.navigateByUrl("lifecycleHooks")
   }
 
 }
