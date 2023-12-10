@@ -9,7 +9,7 @@ import { DataService } from '../data.service';
 export class LifecyclehooksComponent {
 
   name : any; //normal prop
-  // @Input() surName : any; //input prop
+  @Input() surName : any; //input prop
   
   constructor(private dataService : DataService) {
     console.log("Constructor calling..");

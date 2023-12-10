@@ -1,8 +1,9 @@
 <p>parent works!</p>
 <br>
 
-Enter City : <input type="text"[(ngModel)]="city">
-
+Enter City : <input type="text" [(ngModel)]="city">
+<br><br>
+Enter Surname : <input type="text" [(ngModel)]="sName">
 
 <br><br> 
 
@@ -10,3 +11,6 @@ Enter City : <input type="text"[(ngModel)]="city">
 <br>
 
 {{state}}
+
+----------------------------------------------------
+<app-lifecyclehooks [surName]="sName"></app-lifecyclehooks>
