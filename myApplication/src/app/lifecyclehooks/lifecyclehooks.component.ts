@@ -34,7 +34,6 @@ export class LifecyclehooksComponent {
 
   ngOnInit(){
     this.name = this.dataService.userName ;
-
     console.log("ngOnInit calling");
   }
 

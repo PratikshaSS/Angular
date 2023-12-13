@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +7,11 @@ import { Injectable } from '@angular/core';
 export class DataService {
 
   userName : any;
-  static userName: string;
+  //static userName: string;
+
+  data = new Subject<any>();
   constructor() { }
+
 }
 
 // Service : to declare global property , reusable functions logic
