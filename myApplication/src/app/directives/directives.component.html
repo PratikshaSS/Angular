@@ -1,44 +1,44 @@
-<p>directives works!</p>
+<!-- <p>directives works!</p> -->
 
 <!-- 1) Structural Directives -->
 
 <!-- *ngIf -->
-<div *ngIf="isShow">
+<!-- <div *ngIf="isShow">
     <p>{{city}}</p>
 </div>
-<br>
+<br> -->
 
- <!-- *ngFor -->
-<div>{{cars}}</div>
+<!-- *ngFor -->
+<!-- <div>{{cars}}</div>
 <br>
 <div *ngFor="let carName of cars">
     {{carName}}
-</div>
+</div> -->
 
-<br>
+<!-- <br>
 
 <div class="divContainer" *ngIf="showDiv"></div>
 
 <br>
 
 <button (click)="toggle()">Toggle</button>
-<br><br>
+<br><br> -->
 <!-- ngSwitch -->
-<div [ngSwitch] = "fruit">
+<!-- <div [ngSwitch] = "fruit">
     <div *ngSwitchCase = "'mango'">Mango is my fav fruit.</div>
     <div *ngSwitchCase = "'pinapple'">Pinapple is my fav fruit.</div>
     <div *ngSwitchCase = "'pappaya'">Papaya is my fav fruit.</div>
 </div>
-<br><br>
+<br><br> -->
 
 <!-- 2) Attribute Directive -->
-<div class="info">
+<!-- <div class="info">
     I Like Pune
 </div>
-<br>
+<br> -->
 
 <!-- ngClass -->
-<div [ngClass]="{'adminClass' : user == 'Admin' , 
+<!-- <div [ngClass]="{'adminClass' : user == 'Admin' , 
                  'mentorClass' : user == 'Mentor',
                  'studentClass' : user =='Student'
                 }">
@@ -52,10 +52,10 @@
      [class.studentClass]="user == 'Student'">
     WelCome 
 </div>
-<br><br>
+<br><br> -->
 
 <!-- ngStyle -->
-<div style="color: blueviolet;">
+<!-- <div style="color: blueviolet;">
 Welcome 
 </div>
 <br>
@@ -63,7 +63,30 @@ Welcome
 <div [ngStyle]= "user == 'Admin' ? {'background-color' : 'yellow'}
                     :{'background-color' : 'orange'}">
     Welcome to ngStyle 
-</div>
+</div> -->
 
-<button (click)="getData()">Get Data</button>
-{{user}}
+<!-- <button (click)="getData()">Get Data</button>
+{{user}} -->
+
+
+
+<!-- Custom directive -->
+
+<div>
+
+    <h1 class="table_cont">
+        <input type="search" [(ngModel)]="searchText"> <br>
+        Tabel
+    </h1>
+    <table>
+        <tr>
+            <th *ngFor="let headings of tableHeading">{{headings}}</th>
+        </tr>
+        <tr *ngFor="let data of tableData | search : searchText">
+            <td>{{data.name}}</td>
+            <td>{{data.contact}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.age}}</td>
+        </tr>
+    </table>
+</div>
