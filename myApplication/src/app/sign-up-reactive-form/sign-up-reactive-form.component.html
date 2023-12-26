@@ -1,0 +1,39 @@
+<!-- <p>sign-up-reactive-form works!</p> -->
+<div>
+    <form [formGroup]="signUpForm" class="form-container">
+        <label>Name</label><br>
+        <input type="text" formControlName="name"><br>
+        <span class="error" *ngIf="signUpForm.get('name')?.hasError('required')
+             && signUpForm.get('name')?.touched">Name is Required</span><br>
+
+        <label>Mob No.</label><br>
+        <input type="text" formControlName="mobile"><br>
+        <span class="error" *ngIf="signUpForm.get('mobile')?.hasError('maxlength')">
+            Maximum 10 numbers are allowed</span><br>
+
+        <label>PAN No.</label><br>
+        <input type="text" formControlName="pancard"><br>
+        <span class="error" *ngIf="signUpForm.get('pancard')?.hasError('pattern')&& !signUpForm.get('pancard')?.hasError('maxlength')">
+            Invalid PAN No</span>
+        <span class="error" *ngIf="signUpForm.get('pancard')?.hasError('maxlength')">
+            Maxlength is 10</span><br>
+
+        <label>Email</label><br>
+        <input type="text" formControlName="email"><br><br>
+
+        <label>Password</label><br>
+        <input [type]="showPassword ? 'text' : 'password'" formControlName="password">
+        <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye eye-fill"></i>
+        <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-fill"></i>
+        <br><br>
+
+        <label>Confirm Password</label><br>
+        <input [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword">
+        <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye eye-fill"></i>
+        <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-fill"></i>
+        <br><br>
+
+        <button (click)="submit()">Submit</button>
+
+    </form>
+</div>

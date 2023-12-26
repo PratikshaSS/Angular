@@ -1,0 +1,26 @@
+<!-- <p>templatedrivenform works!</p> -->
+
+<div>
+    <form class="formContainer" #loginForm="ngForm" autocomplete="off">
+        <h2>Login</h2>
+        <div>
+            <label>User Name</label><br>
+            <input type="text" ngModel #userName="ngModel" name="userName" id="" required maxlength="5"><br>
+            <span *ngIf="userName?.errors?.['required'] && userName.touched" class="error">User Name is required</span>
+        </div>
+        <div>
+            <label>Password</label><br>
+            <input type="text" ngModel #password="ngModel" name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,12}$"><br>
+            <span *ngIf="password. errors?.['required'] && password.touched" class="error">Password is Required</span><br>
+            <span *ngIf="password.errors?.['pattern']" class="error">Pattern Not Match</span>
+        </div>
+        <br>
+        <div>
+            <button (click)="submit(loginForm)" [disabled]="!loginForm.valid">Submit</button>
+        </div>
+        <br>
+        <div>
+            Not an Account..? <a routerLink="/signupForm"><b>Click here to Create Account..</b></a>
+        </div>
+    </form>
+</div>

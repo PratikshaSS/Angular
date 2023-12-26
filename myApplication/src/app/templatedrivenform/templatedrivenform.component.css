@@ -1,0 +1,12 @@
+.formContainer{
+    height: 300px;
+    margin: auto;
+    background-color: burlywood;
+    border: 2px solid brown;
+    width: 300px;
+    text-align: center;
+}
+
+.error{
+    color: red;
+}
