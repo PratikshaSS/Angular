@@ -2,18 +2,19 @@
 <div>
     <form [formGroup]="signUpForm" class="form-container">
         <label>Name</label><br>
-        <input type="text" formControlName="name"><br>
+        <input type="text" formControlName="name" maxlength="10"><br>
         <span class="error" *ngIf="signUpForm.get('name')?.hasError('required')
              && signUpForm.get('name')?.touched">Name is Required</span><br>
 
         <label>Mob No.</label><br>
-        <input type="text" formControlName="mobile"><br>
+        <input type="text" formControlName="mobile" appNumbersOnly><br>
         <span class="error" *ngIf="signUpForm.get('mobile')?.hasError('maxlength')">
             Maximum 10 numbers are allowed</span><br>
 
         <label>PAN No.</label><br>
         <input type="text" formControlName="pancard"><br>
-        <span class="error" *ngIf="signUpForm.get('pancard')?.hasError('pattern')&& !signUpForm.get('pancard')?.hasError('maxlength')">
+        <span class="error"
+            *ngIf="signUpForm.get('pancard')?.hasError('pattern')&& !signUpForm.get('pancard')?.hasError('maxlength')">
             Invalid PAN No</span>
         <span class="error" *ngIf="signUpForm.get('pancard')?.hasError('maxlength')">
             Maxlength is 10</span><br>
@@ -28,9 +29,16 @@
         <br><br>
 
         <label>Confirm Password</label><br>
-        <input [type]="showPassword ? 'text' : 'password'" formControlName="confirmPassword">
-        <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye eye-fill"></i>
-        <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-fill"></i>
+        <input [type]="showPassword ? 'text' : 'confirmPassword'" formControlName="confirmPassword">
+        <i *ngIf="show1" (click)="toShowPassword1()" class="bi bi-eye eye-fill"></i>
+        <i *ngIf="!show1" (click)="toShowPassword1()" class="bi bi-eye-slash-fill eye-fill"></i>
+        <br><br>
+
+        <label>City</label><br>
+        <input type="text" formControlName="city">
+        <br>
+        <span class="error" *ngIf="signUpForm.get('city')?.hasError('spacesNotAllowed')">
+            More than one space not allowed, Please Remove Spaces</span>
         <br><br>
 
         <button (click)="submit()">Submit</button>

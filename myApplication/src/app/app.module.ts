@@ -18,6 +18,7 @@ import { Sub2Component } from './sub2/sub2.component';
 import { SearchPipe } from './search.pipe';
 import { TemplatedrivenformComponent } from './templatedrivenform/templatedrivenform.component';
 import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-reactive-form.component';
+import { NumbersOnlyDirective } from './numbers-only.directive';
 
 @NgModule({
   declarations: [   //component/pipe/directive
@@ -36,6 +37,7 @@ import { SignUpReactiveFormComponent } from './sign-up-reactive-form/sign-up-rea
     SearchPipe,
     TemplatedrivenformComponent,
     SignUpReactiveFormComponent,
+    NumbersOnlyDirective,
   ],
   imports: [      //modules
     BrowserModule,
