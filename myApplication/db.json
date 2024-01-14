@@ -1,0 +1,49 @@
+{
+  "user": [
+    {},
+    {
+      "id": "5780",
+      "name": "Prat",
+      "mobile": "3645236453",
+      "pancard": "PRTUE2345R",
+      "email": "sdg@26e",
+      "password": "Mau@2010",
+      "confirmPassword": "Mau@2010",
+      "city": "frgfr"
+    },
+    {
+      "id": "dabf",
+      "name": "Pratiksha",
+      "mobile": "3645236453",
+      "pancard": "PRTUE2345R",
+      "email": "sdv@26e",
+      "password": "dsv@2010",
+      "confirmPassword": "dv@2010",
+      "city": "frgfr"
+    }
+    
+  ],
+  "admin": [
+    {
+      "id": "bf94",
+      "name": "Pooja",
+      "mobile": "2364587346",
+      "pancard": "OTURI3522W",
+      "email": "dg@rhews",
+      "password": "Oity1234",
+      "confirmPassword": "Oity1234",
+      "city": "Nashik"
+    },
+    {
+      "id": "83ea",
+      "name": "Priya",
+      "mobile": "2364587346",
+      "pancard": "OTURI3522W",
+      "email": "dg@rhews",
+      "password": "Oity1234",
+      "confirmPassword": "Oity1234",
+      "city": "Nashik"
+    }
+  ],
+  "owner": []
+}

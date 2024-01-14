@@ -52,4 +52,8 @@ directives(){
 purePipes(){
   this.pipes=true;
 }
+
+adminSignUp(){
+  this.router.navigateByUrl('admin/adminSignUp')
+}
 }

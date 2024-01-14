@@ -23,16 +23,24 @@
         <input type="text" formControlName="email"><br><br>
 
         <label>Password</label><br>
-        <input [type]="showPassword ? 'text' : 'password'" formControlName="password">
+        <input [type]="showPassword ? 'text' : 'password'" formControlName="password" (keyup)="passwordMatchValidator()">
         <i *ngIf="show" (click)="toShowPassword()" class="bi bi-eye eye-fill"></i>
         <i *ngIf="!show" (click)="toShowPassword()" class="bi bi-eye-slash-fill eye-fill"></i>
-        <br><br>
+        <br>
+        <span class="error" *ngIf="misMatch">
+            Password & Confirm password should equal.
+        </span>  
+        <br>
 
         <label>Confirm Password</label><br>
-        <input [type]="showPassword ? 'text' : 'confirmPassword'" formControlName="confirmPassword">
+        <input [type]="showPassword ? 'text' : 'confirmPassword'" formControlName="confirmPassword" (keyup)="passwordMatchValidator()">
         <i *ngIf="show1" (click)="toShowPassword1()" class="bi bi-eye eye-fill"></i>
         <i *ngIf="!show1" (click)="toShowPassword1()" class="bi bi-eye-slash-fill eye-fill"></i>
-        <br><br>
+        <br>
+        <span class="error" *ngIf="misMatch">
+            Password & Confirm password should equal.
+        </span>
+        <br>
 
         <label>City</label><br>
         <input type="text" formControlName="city">

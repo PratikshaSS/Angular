@@ -5,17 +5,23 @@
         <button routerLink="/dataBinding" class="btn">Data Binding</button>
         <button (click)="directives()" class="btn">Directives/Pipe</button>
         <button routerLink="lifecycleHooks" class="btn">lifecycleHooks</button>
-        <button routerLink="/parent" class="btn">parent</button>
+        <button routerLink="/parent" class="btn">Parent</button>
         <!-- <button routerLink="/child" class="btn">child</button> -->
         <button routerLink="/subject" class="btn">Subject</button>
         <button (click)="purePipes()" class="btn">Pure Pipes</button>
         <button routerLink="/templatedriven" class="btn">TemplateDriven</button>
+        <button routerLink="/Viewchild1" class="btn">Viewchild</button>
+
+        <button routerLink="/admin/adminLanding" class="btn">Admin</button>
+        <button (click)="adminSignUp()" class="btn">Admin SignUp</button>
+   
     </div>
+    
 <br><br><br><br>
+
     <div *ngIf="pipes">
         {{name | titlecase}}   
              <!-- uppercase , lowercase -->
         {{date | date:'medium'}}
-
     </div>
 </div>

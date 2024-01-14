@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-up-reactive-form',
@@ -14,7 +16,12 @@ export class SignUpReactiveFormComponent {
   show1: boolean = false;
   showPassword1: boolean = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  misMatch: boolean = false;
+
+  postApiResponse : any;
+
+  constructor(private formBuilder: FormBuilder , private dataService : DataService, 
+              private router : Router) { }
 
   ngOnInit() {
     this.formLoad()
@@ -28,23 +35,27 @@ export class SignUpReactiveFormComponent {
       email: [''],
       password: [''],
       confirmPassword: [''],
-      city : ["",[this.spacesNotAllowed]]
+      city: ["", [this.spacesNotAllowed]]
     })
 
   }
 
-
-  spacesNotAllowed(control : any){
+  spacesNotAllowed(control: any) {
     const value = control.value;
-    let isIncludesSpace =/\s{2,}/.test(value)
-    return isIncludesSpace ? {spacesNotAllowed : true} : null;
-    
-    //val
+    let isIncludesSpace = /\s{2,}/.test(value)
+    return isIncludesSpace ? { spacesNotAllowed: true } : null;
   }
 
-  submit() {
-    console.log(this.signUpForm.value);
+  passwordMatchValidator() {
+    const pass = this.signUpForm.get('password')?.value;
+    const confirmPass = this.signUpForm.get('confirmPassword')?.value;
 
+    if (pass != confirmPass) {
+      this.misMatch = true;
+    }
+    else {
+      this.misMatch = false;
+    }
   }
 
   toShowPassword() {
@@ -59,5 +70,23 @@ export class SignUpReactiveFormComponent {
     // this.show=true;
     this.showPassword1 = !this.showPassword1;
     this.show1 = !this.show1;
+  }
+
+  submit() {
+    let endPoint="user"
+    console.log(this.signUpForm.value);
+    this.dataService.postApiCall(endPoint, this.signUpForm.value).subscribe(res=>{
+      //console.log(res);
+      this.postApiResponse = res;
+    })
+
+    if(this.postApiResponse.id){
+      this.router.navigateByUrl('home');
+    }
+
+    else{
+      this.router.navigateByUrl('signUpForm');
+    }
+
   }
 }
